@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .app {
+    font-family: Lato, sans-serif;
+
+    @apply h-screen w-screen text-white;
+  }
+
+  .dd-toggle {
+    @apply animate-fade-in-from-top px-4 text-white/70 outline-none transition-all duration-500 hover:bg-white/10 hover:text-white focus:bg-white/10 focus:text-white;
+  }
+
+  .menu__button {
+    @apply flex w-full animate-fade-in-from-left flex-col items-center py-5 text-white/40 outline-none transition-all duration-500 hover:bg-[#2B363B] hover:text-white focus:bg-[#2B363B] focus:text-white;
+  }
+
+  .menu__icon {
+    @apply mb-1 text-lg;
+  }
+
+  .menu__text {
+    @apply text-xs font-bold;
+  }
+
+  .panel__img {
+    @apply h-36 w-36 cursor-pointer rounded-lg object-cover transition-all duration-200 hover:scale-105;
+  }
+
+  .canvas__circle {
+    @apply absolute h-4 w-4 animate-[fade-in_1s_1s_backwards] rounded-[50%] bg-white;
+  }
+
+  .canvas__circle:nth-of-type(1) {
+    @apply top-[11.5%] left-[9.8%] cursor-nw-resize sm:left-[10.4%];
+  }
+
+  .canvas__circle:nth-of-type(2) {
+    @apply top-[11.5%] right-[9.8%] cursor-sw-resize sm:right-[10.4%];
+  }
+
+  .canvas__circle:nth-of-type(3) {
+    @apply bottom-[11.5%] left-[9.8%] cursor-sw-resize sm:left-[10.4%];
+  }
+
+  .canvas__circle:nth-of-type(4) {
+    @apply bottom-[11.5%] right-[9.8%] cursor-nw-resize sm:right-[10.4%];
+  }
+
+  .tool {
+    @apply h-12 w-12 rounded-lg bg-[#E1E6E9] text-[#404446] transition-all duration-500;
+  }
+
+  .tool:hover,
+  .tool:focus {
+    @apply bg-[#2B363B] text-white;
+  }
+}
